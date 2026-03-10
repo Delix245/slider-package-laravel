@@ -1,14 +1,31 @@
 {
-    "name": "vendor_name/posts",
+    "name": "delix245/posts",
     "description": "description",
     "minimum-stability": "stable",
-    "license": "proprietary",
+    "license": "MIT",
     "authors": [
         {
-            "name": "Dell",
-            "email": "email@example.com"
+            "name": "delix245",
+            "email": "harabugaslava@gmail.com"
         }
     ],
     "require": {
+        "php": "^8.2"
+    },
+
+    "autoload": {
+        "psr-4": {
+            "Delix245\\Posts\\": "src/"
+        }
+    },
+
+    "_comment": "extra - автоматически зарегистрирует ServiceProvider в Laravel",
+
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Delix245\\Posts\\Providers\\PostsServiceProvider"
+            ]
+        }
     }
 }
