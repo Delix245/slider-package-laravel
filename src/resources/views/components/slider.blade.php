@@ -5,14 +5,17 @@
 
         @foreach($slides as $slide)
 
-            <div class="banner-one__single-slide d-flex align-items-center"
-                 style="background-image: url('{{ $slide->image }}');">
+            <div class="banner-one__single-slide d-flex align-items-center position-relative"
+                 style="background-image: url('{{ $slide->image }}'); background-size: cover; background-position: center;">
 
-                <div class="container">
+                <!-- затемнённый оверлей -->
+                <div class="overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5);"></div>
+
+                <div class="container position-relative" style="z-index: 2;">
                     <div class="row">
                         <div class="col-xxl-6 col-md-8">
 
-                            <div class="banner-one__single-content">
+                            <div class="banner-one__single-content text-white"> <!-- белый текст -->
 
                                 <div class="banner-one__inner-title">
 
@@ -21,7 +24,7 @@
                                         <h2 class="right">{{ $slide->small_title_right }}</h2>
                                     </div>
 
-                                    <a href="#" class="d-block subtitle">
+                                    <a href="#" class="d-block subtitle text-white">
                                         <h4>{{ $slide->subtitle }}</h4>
                                     </a>
 
