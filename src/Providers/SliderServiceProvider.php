@@ -1,10 +1,10 @@
 <?php
-namespace Delix245\Posts\Providers;
+namespace Delix245\Slider\Providers;
 
-use Delix245\Posts\Console\Commands\InstallCommand;
+use Delix245\Slider\Console\Commands\InstallCommand;
 use Illuminate\Support\ServiceProvider;
 
-class PostsServiceProvider extends ServiceProvider
+class SliderServiceProvider extends ServiceProvider
 {
     /**
      * Register services.
@@ -20,18 +20,18 @@ class PostsServiceProvider extends ServiceProvider
     public function boot(): void
     {
         // подгружаем роуты из пакета
-        $this->loadRoutesFrom(__DIR__ . '/../routes/posts.php');
+        // $this->loadRoutesFrom(__DIR__ . '/../routes/posts.php');
 
-        $this->loadViewsFrom(__DIR__ . '/../resources/views', 'posts');
+        $this->loadViewsFrom(__DIR__ . '/../resources/views', 'slider');
 
         $this->loadMigrationsFrom(__DIR__ . '/../database/migrations');
 
         $this->publishes([
-            __DIR__ . '/../resources/views' => base_path('resources/views/vendor/posts'),
+            __DIR__ . '/../resources/views' => base_path('resources/views/vendor/slider'),
         ]);
 
         $this->publishes([
-            __DIR__ . '/../config/posts.php' => config_path('posts.php'),
+            __DIR__ . '/../config/slider.php' => config_path('slider.php'),
         ]);
 
         if ($this->app->runningInConsole()) {

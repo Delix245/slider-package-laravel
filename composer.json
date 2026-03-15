@@ -1,8 +1,10 @@
 {
-    "name": "delix245/posts",
+    "name": "delix245/slider",
     "description": "description",
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
     "license": "MIT",
+    "version": "1.0.0",
     "authors": [
         {
             "name": "delix245",
@@ -12,19 +14,15 @@
     "require": {
         "php": "^8.2"
     },
-
     "autoload": {
         "psr-4": {
-            "Delix245\\Posts\\": "src/"
+            "Delix245\\Slider\\": "src/"
         }
     },
-
-    "_comment": "extra - автоматически зарегистрирует ServiceProvider в Laravel",
-
     "extra": {
         "laravel": {
             "providers": [
-                "Delix245\\Posts\\Providers\\PostsServiceProvider"
+                "Delix245\\Slider\\Providers\\SliderServiceProvider"
             ]
         }
     }

@@ -1,6 +1,6 @@
 <?php
 
-namespace Delix245\Posts\Console\Commands;
+namespace Delix245\Slider\Console\Commands;
 
 use Illuminate\Console\Command;
 
@@ -11,7 +11,7 @@ class InstallCommand extends Command
      *
      * @var string
      */
-    protected $signature = 'posts:install';
+    protected $signature = 'slider:install';
 
     /**
      * The console command description.
