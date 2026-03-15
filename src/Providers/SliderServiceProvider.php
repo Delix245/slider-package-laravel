@@ -1,7 +1,9 @@
 <?php
 namespace Delix245\Slider\Providers;
 
+use CutCode\Slider\View\Components\Slider;
 use Delix245\Slider\Console\Commands\InstallCommand;
+use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
 
 class SliderServiceProvider extends ServiceProvider
@@ -39,5 +41,7 @@ class SliderServiceProvider extends ServiceProvider
                 InstallCommand::class,
             ]);
         }
+
+        Blade::component('slider', Slider::class);
     }
 }
