@@ -1,3 +1,4 @@
+{{-- updated design --}}
 <section class="banner-one wow fadeInUp">
 
     <div class="banner-one__slider slick"
@@ -20,8 +21,8 @@
                                 <div class="banner-one__inner-title">
 
                                     <div class="banner-one__big-title">
-                                        <h2 class="left">{{ $slide->small_title_left }}</h2>
-                                        <h2 class="right">{{ $slide->small_title_right }}</h2>
+                                        <h2 class="left text-white">{{ $slide->small_title_left }}</h2>
+                                        <h2 class="right text-white">{{ $slide->small_title_right }}</h2>
                                     </div>
 
                                     <a href="#" class="d-block subtitle text-white">
@@ -29,13 +30,18 @@
                                     </a>
 
                                     <div class="title">
-                                        <h1>{!! $slide->title !!}</h1>
+                                        <h1 class="text-white">{!! $slide->title !!}</h1>
                                     </div>
+
+                                    <!-- вывод описания -->
+                                    @if($slide->description)
+                                        <p class="description text-white mt-2">{{ $slide->description }}</p>
+                                    @endif
 
                                 </div>
 
                                 @if($slide->button_link)
-                                    <div class="banner-one__button-box">
+                                    <div class="banner-one__button-box mt-3">
                                         <a href="{{ $slide->button_link }}" class="btn--secondary style2">
                                             {{ $slide->button_text }}
                                         </a>
