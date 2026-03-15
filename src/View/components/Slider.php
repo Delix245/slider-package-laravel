@@ -1,6 +1,6 @@
 <?php
 
-namespace CutCode\Slider\View\Components;
+namespace Delix245\Slider\View\Components;
 
 use Illuminate\View\Component;
 use Delix245\Slider\Models\Slider as SliderModel;
